@@ -116,6 +116,9 @@ function click(cell){
     if(cell.classList.contains('valid')){
         clearCells(cell);
     }else{
+        if(cell.classList.contains('flag')){
+            return ;
+        }
         isGameOver = true;
         gameOver();
     }
